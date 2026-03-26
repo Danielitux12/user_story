@@ -1,9 +1,16 @@
 print("Welcome to inventory")
 def valid_product():
     product = str(input("Enter name of the product: "))
-    if product == "":
+    """if product == "":
         print("Enter a valid product")
+        valid_product()"""
+    if product.isalpha():
+        return product
+    else: 
+        print("type only a name")
         valid_product()
+
+        
 def valid_price():
     try:
         global price
