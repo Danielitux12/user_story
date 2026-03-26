@@ -6,7 +6,8 @@ def valid_product():
         valid_product()
 def valid_price():
     try:
-        price = float (input("Enter price of the product: "))
+        global price
+        price = int (input("Enter price of the product: "))
         if price > 0:
             print("PRICE VALID :)")
         else:
@@ -17,6 +18,7 @@ def valid_price():
         valid_price()
 def valid_quantity():
     try:
+        global quantity
         quantity = int (input("Enter quantity of the product: "))
         if quantity > 0:
             print("QUANTITY VALID :D")
@@ -26,3 +28,7 @@ def valid_quantity():
     except ValueError:
         print("Error, invalid quantity, try again :)")
         valid_quantity()
+valid_product()
+valid_price()
+valid_quantity()
+total_cost = price * quantity
