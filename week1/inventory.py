@@ -1,5 +1,6 @@
 print("Welcome to inventory")
 def valid_product():
+    global product
     product = str(input("Enter name of the product: "))
     if product.isalpha():
         print("PRODUCT VALID :>")
@@ -35,3 +36,8 @@ valid_product()
 valid_price()
 valid_quantity()
 total_cost = price * quantity
+print("---INVENTORY---")
+print(f"Product: {product}")
+print(f"Price: {price}")
+print(f"Quantity: {quantity}")
+print(f"Total cost: {price} x {quantity} = {total_cost}")
